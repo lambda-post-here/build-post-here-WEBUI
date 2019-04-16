@@ -5,14 +5,14 @@
     position: relative;
     overflow: hidden;
     margin-top: 16px;
-    @media(max-width:500px){
+    @media @mobile{
       width: 100%;
       height:256px;
     }
     .left-button, .right-button {
       .flex(center);
-      color: @lambda-times-color-white;
-      background-color: @lambda-times-color-primary;
+      color: @post-color-white;
+      background-color: @post-color-primary;
       font-size: 40px;
       border-radius: 50%;
       position: absolute;
@@ -20,9 +20,9 @@
       height: 50px;
       cursor: pointer;
       &:hover {
-        color: @lambda-times-color-primary;
-        background-color: @lambda-times-color-white;
-        border: 2px solid @lambda-times-color-primary;
+        color: @post-color-primary;
+        background-color: @post-color-white;
+        border: 2px solid @post-color-primary;
       }
     }
     .left-button {

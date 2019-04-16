@@ -1,32 +1,24 @@
 header{
-    // border:2px solid red;
-    // width:100%;
     display:flex;
     height:100px;
     padding: 10px;
-    // padding:0 20%;
-    // border-bottom:2px dashed #C0C0C0;
     background:@sandy-beach;
 
     h1{
-        // border:2px solid green;
         width:40%;
         margin-right: 11%;
         display:flex;
         align-items: center;
         font-size:35px;
-        color:white;
+        color:@white;
         
     }
 
     nav{
-        // border:2px solid blue;
-        // width:50%;
         display:flex;
         justify-content: space-between;
 
         a{
-            // border:2px solid darkorange;
             text-decoration:none;
             width: 100px;
             height: 100px;
@@ -34,20 +26,20 @@ header{
             justify-content: center;
             align-items: center;
             font-size: 17px;
-            color:white;
+            color:@white;
         }
 
     }
 }
 
-@media(max-width:500px){
+@media @mobile{
 
 	.main-navigation{
 		width:100%;
 		height: 622px;
 		flex-direction: column;
 		margin:0px;
-		// margin-top:50px;
+		
 	}
 
 	.main-navigation h1{
@@ -55,7 +47,6 @@ header{
 			width:100%;
 			height: 100px;
 			margin-top:80px;
-            // border-bottom:1px solid @lightgray;
             order:0;
         }
         
@@ -78,7 +69,6 @@ header{
 			a{
 				height: 80px;
 				width: 100%;
-				// border: 1px solid black;
 				border-bottom:1px solid @lightgray;
 				justify-content: center;
 			}
@@ -89,38 +79,6 @@ header{
         display:none;
     }
 
-    
-// @media(max-width:500px){
-
-//     header{
-//         display:block;
-//         text-align:center;
-//         margin-top: 20px;
-//         height:500px;
-//         // justify-content: center;
-//         // flex-direction:column;
-//         // padding:0px;
-
-//         h1{
-//             margin:0px;
-//             width:100%;
-//             display:block;
-//             // justify-content: center;
-//             // align-items: center;
-//             font-size:9rem;
-//             color:white;
-//             border-bottom: 1px solid black;
-//         }
-
-//         nav{
-//             width:100%;
-
-//             a{
-//                 font-size:44px;
-//                 // height: 50px;
-//                 color:white;
-//                 border-bottom: 1px solid black;
-//             }
-//         }
-//     }
-// }
+    a:last-child {
+        font-size: 30px;
+      }

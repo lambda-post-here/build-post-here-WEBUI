@@ -140,14 +140,14 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Bree Serif', cursive;
 }
 h1 {
   font-size: 4rem;
@@ -170,7 +170,6 @@ img {
   height: auto;
 }
 .container {
-  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
@@ -240,12 +239,14 @@ header nav a {
 .dropdown {
   display: none;
 }
+a:last-child {
+  font-size: 30px;
+}
 @media (max-width: 500px) {
   .dropdown {
     display: block;
     z-index: 2;
     position: relative;
-    left: 25px;
     cursor: pointer;
   }
   .dropdown h1 {
@@ -259,7 +260,7 @@ header nav a {
     padding: 15px;
     border: 3px solid white;
     background-color: #6869D1;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: bold;
   }
@@ -269,7 +270,7 @@ header nav a {
   .dropdown .dropdown-content {
     width: 100%;
     position: absolute;
-    background-color: white;
+    background-color: #6869D1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,12 +283,12 @@ header nav a {
     padding: 15px 0;
     font-size: 18px;
     text-decoration: none;
-    border-bottom: 2px solid black;
-    color: #6869D1;
+    border-bottom: 2px solid #6869D1;
+    color: white;
   }
   .dropdown .dropdown-link:hover {
-    color: white;
-    background-color: #6869D1;
+    color: #6869D1;
+    background-color: white;
   }
   .dropdown .dropdown-hidden {
     display: none;
