@@ -13,9 +13,69 @@
     justify-content: space-between;
     align-items: center;
     
+    
 }
 
 
+// ****************************************
+.reddit-img{
+//   transition:2s;
+// }
+
+// .reddit-img:hover{
+//   // background:#203f72;
+//   transform:rotateX(360deg) translateX(600px);
+// }
+
+-webkit-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -moz-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -ms-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  
+  position: relative;
+  left: 0;
+}
+
+/* Spinning the sphere using key frames */
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+/* Move sphere from left to right */
+@-moz-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-ms-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-webkit-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+
+// *************************************
 .about-content h2{
     font-size:5rem;
 
@@ -42,6 +102,10 @@
 .top-content{
     padding: 20px 0;
     margin-top:5%;
+
+    p{
+        margin: 0 10%;
+    }
 }
 
 .contact-content{
@@ -59,9 +123,10 @@
     padding-top: 3%;
     margin:0 10%;
     margin-bottom:30px;
-    background:#a6cbe0;
+    // background:#a6cbe0;7296aa
+    background:#7296aa;
     padding-bottom: 20px;
-    border-radius: 5%;
+    border-radius: 3%;
     h2{
         text-align: center;
     }

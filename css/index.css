@@ -170,6 +170,7 @@ img {
   height: auto;
 }
 .container {
+  padding: 0 3%;
   width: 100%;
   margin: 0 auto;
 }
@@ -179,13 +180,24 @@ header {
   padding: 10px;
   background: #6869D1;
 }
+header img {
+  transition: 1s;
+}
+header img:hover {
+  transform: rotateZ(360deg);
+}
 header h1 {
   width: 40%;
+  margin-left: 2%;
   margin-right: 11%;
   display: flex;
   align-items: center;
   font-size: 35px;
   color: white;
+  transition: 1s;
+}
+header h1:hover {
+  transform: rotateZ(360deg);
 }
 header nav {
   display: flex;
@@ -200,6 +212,11 @@ header nav a {
   align-items: center;
   font-size: 17px;
   color: white;
+  transition: 1s;
+}
+header nav a:hover {
+  color: black;
+  transform: scale(1.2);
 }
 @media (max-width: 500px) {
   .main-navigation {
@@ -370,6 +387,11 @@ a:last-child {
   align-items: center;
   font-size: 17px;
   color: white;
+  transition: 1s;
+}
+.footer-content nav a:hover {
+  color: black;
+  transform: scale(1.2);
 }
 .footer-content p {
   text-align: center;
@@ -392,6 +414,82 @@ a:last-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.reddit-img {
+  -webkit-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -moz-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -ms-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: relative;
+  left: 0;
+}
+/* Spinning the sphere using key frames */
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* Move sphere from left to right */
+@-moz-keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-ms-keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 .about-content h2 {
   font-size: 5rem;
@@ -418,6 +516,9 @@ a:last-child {
   padding: 20px 0;
   margin-top: 5%;
 }
+.top-content p {
+  margin: 0 10%;
+}
 .contact-content {
   margin: 30px 0;
 }
@@ -430,9 +531,9 @@ a:last-child {
   padding-top: 3%;
   margin: 0 10%;
   margin-bottom: 30px;
-  background: #a6cbe0;
+  background: #7296aa;
   padding-bottom: 20px;
-  border-radius: 5%;
+  border-radius: 3%;
 }
 .data h2 {
   text-align: center;
