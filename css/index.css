@@ -140,14 +140,14 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Bree Serif', cursive;
 }
 h1 {
   font-size: 4rem;
@@ -170,7 +170,7 @@ img {
   height: auto;
 }
 .container {
-  max-width: 1200px;
+  padding: 0 3%;
   width: 100%;
   margin: 0 auto;
 }
@@ -180,13 +180,24 @@ header {
   padding: 10px;
   background: #6869D1;
 }
+header img {
+  transition: 1s;
+}
+header img:hover {
+  transform: rotateZ(360deg);
+}
 header h1 {
   width: 40%;
+  margin-left: 2%;
   margin-right: 11%;
   display: flex;
   align-items: center;
   font-size: 35px;
   color: white;
+  transition: 1s;
+}
+header h1:hover {
+  transform: rotateZ(360deg);
 }
 header nav {
   display: flex;
@@ -201,6 +212,11 @@ header nav a {
   align-items: center;
   font-size: 17px;
   color: white;
+  transition: 1s;
+}
+header nav a:hover {
+  color: black;
+  transform: scale(1.2);
 }
 @media (max-width: 500px) {
   .main-navigation {
@@ -240,12 +256,14 @@ header nav a {
 .dropdown {
   display: none;
 }
+a:last-child {
+  font-size: 30px;
+}
 @media (max-width: 500px) {
   .dropdown {
     display: block;
     z-index: 2;
     position: relative;
-    left: 25px;
     cursor: pointer;
   }
   .dropdown h1 {
@@ -259,7 +277,7 @@ header nav a {
     padding: 15px;
     border: 3px solid white;
     background-color: #6869D1;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: bold;
   }
@@ -269,7 +287,7 @@ header nav a {
   .dropdown .dropdown-content {
     width: 100%;
     position: absolute;
-    background-color: white;
+    background-color: #6869D1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,12 +300,12 @@ header nav a {
     padding: 15px 0;
     font-size: 18px;
     text-decoration: none;
-    border-bottom: 2px solid black;
-    color: #6869D1;
+    border-bottom: 2px solid #6869D1;
+    color: white;
   }
   .dropdown .dropdown-link:hover {
-    color: white;
-    background-color: #6869D1;
+    color: #6869D1;
+    background-color: white;
   }
   .dropdown .dropdown-hidden {
     display: none;
@@ -369,6 +387,11 @@ header nav a {
   align-items: center;
   font-size: 17px;
   color: white;
+  transition: 1s;
+}
+.footer-content nav a:hover {
+  color: black;
+  transform: scale(1.2);
 }
 .footer-content p {
   text-align: center;
@@ -391,6 +414,82 @@ header nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.reddit-img {
+  -webkit-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -moz-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -ms-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: relative;
+  left: 0;
+}
+/* Spinning the sphere using key frames */
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* Move sphere from left to right */
+@-moz-keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-ms-keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 .about-content h2 {
   font-size: 5rem;
@@ -417,6 +516,9 @@ header nav a {
   padding: 20px 0;
   margin-top: 5%;
 }
+.top-content p {
+  margin: 0 10%;
+}
 .contact-content {
   margin: 30px 0;
 }
@@ -424,4 +526,77 @@ header nav a {
   .flow-img {
     padding: 0 3%;
   }
+}
+.data {
+  padding-top: 3%;
+  margin: 0 10%;
+  margin-bottom: 30px;
+  background: #7296aa;
+  padding-bottom: 20px;
+  border-radius: 3%;
+}
+.data h2 {
+  text-align: center;
+}
+.data .content-section {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .data .content-section {
+    flex-direction: column;
+  }
+}
+.data .content-section .text-content {
+  width: 48%;
+  padding-right: 1%;
+}
+.data .content-section .text-content h3 {
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .data .content-section .text-content {
+    width: 100%;
+    padding-right: 0%;
+  }
+}
+.data .content-section .img-content {
+  width: 48%;
+  padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .data .content-section .img-content {
+    width: 100%;
+    padding-left: 0%;
+  }
+}
+.data .content-section .img-content img {
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .data .content-section .img-content img {
+    width: 100%;
+  }
+}
+.data .inverse-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+.data .inverse-content .text-content {
+  padding-left: 1%;
+  padding-right: 0;
+}
+@media (max-width: 500px) {
+  .data .inverse-content .text-content {
+    order: -1;
+  }
+}
+.data .inverse-content .img-content {
+  padding-right: 1%;
+  padding-left: 0;
 }

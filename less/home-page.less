@@ -9,18 +9,77 @@
 }
 
 .about-content {
-    // font-size:25px;
     display:flex;
     justify-content: space-between;
     align-items: center;
     
+    
 }
 
 
+// ****************************************
+.reddit-img{
+//   transition:2s;
+// }
+
+// .reddit-img:hover{
+//   // background:#203f72;
+//   transform:rotateX(360deg) translateX(600px);
+// }
+
+-webkit-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -moz-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -ms-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  
+  position: relative;
+  left: 0;
+}
+
+/* Spinning the sphere using key frames */
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+/* Move sphere from left to right */
+@-moz-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-ms-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-webkit-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+
+// *************************************
 .about-content h2{
     font-size:5rem;
 
-    @media(max-width:500px){
+    @media @mobile{
         width:100%;
         text-align: center;
         font-size:3rem;
@@ -35,7 +94,6 @@
     color:@font-color1;
     display: flex;
     justify-content: center;
-    
     align-items: center;
     font-size:25px;
     margin-right:5px;
@@ -44,15 +102,107 @@
 .top-content{
     padding: 20px 0;
     margin-top:5%;
+
+    p{
+        margin: 0 10%;
+    }
 }
 
 .contact-content{
     margin:30px 0;
 }
 
-@media(max-width:500px){
+@media @mobile{
 
 	.flow-img{
 		padding:0 3%;
     }
+}
+
+.data{
+    padding-top: 3%;
+    margin:0 10%;
+    margin-bottom:30px;
+    // background:#a6cbe0;7296aa
+    background:#7296aa;
+    padding-bottom: 20px;
+    border-radius: 3%;
+    h2{
+        text-align: center;
+    }
+    
+.content-section {
+    // margin:0 10%;
+    margin-left:10%;
+    margin-right:10%;
+    // background:orange;
+    // margin: 30px 0;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media @mobile{
+      
+        flex-direction: column;
+    }
+    
+    .text-content {
+      width: 48%;
+      padding-right: 1%;
+
+      h3{
+        font-size: 2rem;
+    }
+
+      @media @mobile{
+        width:100%;
+        padding-right:0%;
+      }
+    }
+
+    .img-content {
+        // border:2px solid red;
+      width: 48%;
+      padding-left: 1%;
+
+      @media @mobile{
+        width:100%;
+        padding-left:0%;
+      }
+
+      img {
+        border-radius: 10px;
+
+        @media @mobile{
+          width:100%;
+        }
+      }
+    }
+  }
+
+
+  .inverse-content {
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom: 5%;
+    // background:orange;
+    // padding-bottom: 30px;
+    // border-bottom: 2px dashed @navigation-border;
+
+    .text-content {
+      padding-left: 1%;
+      padding-right: 0;
+
+      @media @mobile{
+        
+          order:-1;
+        }
+    }
+
+    .img-content {
+      padding-right: 1%;
+      padding-left: 0;
+    }
+  }
 }

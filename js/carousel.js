@@ -57,10 +57,7 @@ class Carousel {
 
         //set the display of the current image to flex
         this.images[this.currentIndex].style.display="flex"
-        // this.images[this.currentIndex].style.transiton="left 1s ease-in-out"
-        // this.images[this.currentIndex].style.transitionProperty="left"
-        // this.images[this.currentIndex].style.transitionDuration="2s"
-        // this.images[this.currentIndex].style.transitionTimingFunction="ease-out"
+       
         
        
     }
